@@ -15,7 +15,7 @@ Use these files a a basis for your own homepage (if you like what I've done) or 
 
 Populate your variables in the supplied .env-example in the Templates folder
 
-Use the supplied docker-compose file to setup the stack on portainer OR just run using docker-compose.
+Use the supplied docker-compose.yaml (.github/Template/docker-compose.yaml) file to setup the stack on portainer OR just run using docker-compose.
 
 > [!IMPORTANT]
 > Update with more detailed instructions
