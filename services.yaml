@@ -130,7 +130,7 @@
             accountid: "{{HOMEPAGE_VAR_CLOUDFLARE_ID}}"
             key: "{{HOMEPAGE_VAR_CLOUDFLARE_TOKEN}}"
             tunnelid: "{{HOMEPAGE_VAR_CLOUDFLARE_DOCKER}}"
-    - nobodyhome.dev:
+    - "{{HOMEPAGE_VAR_MYURL_PUBLIC}}":
             href: https://one.dash.cloudflare.com
             widget:
                 type: cloudflared
@@ -196,7 +196,7 @@
             password: "{{HOMEPAGE_VAR_ADGUARD_PASSWORD}}"
 
 - Links:
-    - nobodyhome.dev:
+    - "{{HOMEPAGE_VAR_MYURL_PUBLIC}}":
         href: "{{HOMEPAGE_VAR_URL_PUBLIC}}"
         icon: mdi-lightbulb-variant-outline-#FFFFFF
         siteMonitor: "{{HOMEPAGE_VAR_URL}}"
