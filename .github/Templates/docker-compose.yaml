@@ -1,0 +1,15 @@
+version: "3.3"
+services: 
+  homepage: 
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    ports:
+      - 3002:3000
+    volumes:
+      - LOCAL-PATH-HERE:/app/config #update for the pi cluster
+    environment:
+      PUID: $PUID
+      PGID: $PGID #update for pi cluster in .env to 1003
+    deploy:
+      mode: global
+    restart: unless-stopped
