@@ -1,0 +1,241 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/services
+
+- Virtualization:
+    - Uptime-Kuma:
+        href: "{{HOMEPAGE_VAR_URL_UPTIME_KUMA_PUBLIC}}"
+        icon: uptime-kuma.png
+        siteMonitor: "{{HOMEPAGE_VAR_URL_UPTIME_KUMA}}"
+        widget:
+            type: uptimekuma
+            url: "{{HOMEPAGE_VAR_URL_UPTIME_KUMA}}"
+            slug: details
+    - Mars:
+        icon: proxmox.svg
+        href: "{{HOMEPAGE_VAR_PROXMOX_URL_PUBLIC}}"
+        description: Proxmox Server
+        ping: "{{HOMEPAGE_VAR_PROXMOX_IP}}"
+        widget:
+            type: proxmox
+            fields: ["vms","resources.cpu","resources.mem"]
+            url: "{{HOMEPAGE_VAR_PROXMOX_URL}}"
+            username: "{{HOMEPAGE_VAR_PROXMOX_USER}}"
+            password: "{{HOMEPAGE_VAR_PROXMOX_API_KEY}}"
+            node: mars
+    - Mirror:
+        icon: proxmox.png
+        href: "{{HOMEPAGE_VAR_PROXMOX_BACKUP_URL_PUBLIC}}"
+        description: Proxmox Backup Server
+        ping: "{{HOMEPAGE_VAR_PROXMOX_BACKUP_IP}}"
+        widget:
+            type: proxmoxbackupserver
+            url: "{{HOMEPAGE_VAR_PROXMOX_BACKUP_URL}}"
+            username: "{{HOMEPAGE_VAR_PROXMOX_BACKUP_USER}}"
+            password: "{{HOMEPAGE_VAR_PROXMOX_BACKUP_PASSWORD}}"
+    - Portainer-Mariner:
+        icon: portainer.png
+        href: "{{HOMEPAGE_VAR_PORTAINER_URL_MARINER}}"
+        description: Mariner
+        ping: "{{HOMEPAGE_VAR_PORTAINER_IP}}"
+        widget:
+            type: portainer
+            url: "{{HOMEPAGE_VAR_PORTAINER_URL}}"
+            env: 2
+            key: "{{HOMEPAGE_VAR_PORTAINER_TOKEN}}"
+    - Pi-Cluster:
+        icon: si-docker-#2496ED
+        href: "{{HOMEPAGE_VAR_PORTAINER_URL_CLUSTER}}"
+        description: Pi Cluster
+        ping: "{{HOMEPAGE_VAR_PORTAINER_IP}}"
+        widget:
+            type: portainer
+            url: "{{HOMEPAGE_VAR_PORTAINER_URL}}"
+            env: 7
+            key: "{{HOMEPAGE_VAR_PORTAINER_TOKEN}}"
+    - Docker-Terra:
+        icon: si-docker-#2496ED
+        href: "{{HOMEPAGE_VAR_PORTAINER_URL_TERRA}}"
+        description: Terra
+        ping: "{{HOMEPAGE_VAR_PORTAINER_IP}}"
+        widget:
+            type: portainer
+            url: "{{HOMEPAGE_VAR_PORTAINER_URL}}"
+            env: 8
+            key: "{{HOMEPAGE_VAR_PORTAINER_TOKEN}}"
+
+- Media:
+    - Plex:
+        href: https://app.plex.tv
+        icon: plex.png
+        description: "Media Player"
+        siteMonitor: "{{HOMEPAGE_VAR_PLEX_URL}}"
+        widget:
+            type: plex
+            fields: ["streams","movies","tv"]
+            url: "{{HOMEPAGE_VAR_PLEX_URL}}"
+            key: "{{HOMEPAGE_VAR_PLEX_TOKEN}}"
+    - Radarr:
+        href: "{{HOMEPAGE_VAR_RADARR_URL_PUBLIC}}"
+        icon: radarr.png
+        description: "Movie Library"
+        siteMonitor: "{{HOMEPAGE_VAR_RADARR_URL}}"
+        widget:
+            type: radarr
+            fields: ["movies"]
+            url: "{{HOMEPAGE_VAR_RADARR_URL}}"
+            key: "{{HOMEPAGE_VAR_RADARR_KEY}}"
+    - Sonarr:
+        href: "{{HOMEPAGE_VAR_SONARR_URL_PUBLIC}}"
+        icon: sonarr.png
+        description: "TV Library"
+        siteMonritor: "{{HOMEPAGE_VAR_SONARR_URL}}"
+        widget:
+            type: sonarr
+            url: "{{HOMEPAGE_VAR_SONARR_URL}}"
+            fields: ["series"]
+            key: "{{HOMEPAGE_VAR_SONARR_KEY}}"
+    - sabNZB:
+        href: "{{HOMEPAGE_VAR_SABNZBD_URL}}"
+        icon: sabnzbd-alt.png
+        description: Yarr
+        siteMonitor: "{{HOMEPAGE_VAR_SABNZBD_URL}}"
+        widget:
+            type: sabnzbd
+            url: "{{HOMEPAGE_VAR_SABNZBD_URL}}"
+            key: "{{HOMEPAGE_VAR_SABNZBD_KEY}}"
+
+- Cloudflare:
+    - Mariner:
+        href: https://one.dash.cloudflare.com
+        widget:
+            type: cloudflared
+            fields: ["status", "origin_ip"]
+            accountid: "{{HOMEPAGE_VAR_CLOUDFLARE_ID}}"
+            key: "{{HOMEPAGE_VAR_CLOUDFLARE_TOKEN}}"
+            tunnelid: "{{HOMEPAGE_VAR_CLOUDFLARE_MARINER}}"
+    - Luna:
+        href: https://one.dash.cloudflare.com
+        widget:
+            type: cloudflared
+            fields: ["status"]
+            accountid: "{{HOMEPAGE_VAR_CLOUDFLARE_ID}}"
+            key: "{{HOMEPAGE_VAR_CLOUDFLARE_TOKEN}}"
+            tunnelid: "{{HOMEPAGE_VAR_CLOUDFLARE_LUNA}}"
+    - Pi-Cluster:
+        href: https://one.dash.cloudflare.com
+        widget:
+            type: cloudflared
+            fields: ["status"]
+            accountid: "{{HOMEPAGE_VAR_CLOUDFLARE_ID}}"
+            key: "{{HOMEPAGE_VAR_CLOUDFLARE_TOKEN}}"
+            tunnelid: "{{HOMEPAGE_VAR_CLOUDFLARE_DOCKER}}"
+    - nobodyhome.dev:
+            href: https://one.dash.cloudflare.com
+            widget:
+                type: cloudflared
+                fields: ["status"]
+                accountid: "{{HOMEPAGE_VAR_CLOUDFLARE_ID}}"
+                key: "{{HOMEPAGE_VAR_CLOUDFLARE_TOKEN}}"
+                tunnelid: "{{HOMEPAGE_VAR_CLOUDFLARE_NOBODYHOME}}"
+    - jameswebb:
+            href: https://one.dash.cloudflare.com
+            widget:
+                type: cloudflared
+                accountid: "{{HOMEPAGE_VAR_CLOUDFLARE_ID}}"
+                key: "{{HOMEPAGE_VAR_CLOUDFLARE_TOKEN}}"
+                tunnelid: "{{HOMEPAGE_VAR_CLOUDFLARE_JAMESWEBB}}"
+    # - Speed Test:
+    #         href:
+    #         widget:
+    #             type: speedtest
+    #             url: "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
+    # Speed test is broken for some reason on this system
+
+- DNS:
+    - Mariner:
+        href: "{{HOMEPAGE_VAR_ADGUARD_URL_MARINER_PUBLIC}}"
+        icon: adguard-home.png
+        siteMonitor: "{{HOMEPAGE_VAR_ADGUARD_URL}}"
+        widget:
+            type: adguard
+            fields: ["queries", "blocked", "latency"]
+            url: "{{HOMEPAGE_VAR_ADGUARD_URL}}"
+            username: "{{HOMEPAGE_VAR_ADGUARD_USERNAME}}"
+            password: "{{HOMEPAGE_VAR_ADGUARD_PASSWORD}}"
+    - Luna:
+        href: "{{HOMEPAGE_VAR_ADGUARD_URL_LUNA_PUBLIC}}"
+        icon: adguard-home.png
+        siteMonitor: "{{HOMEPAGE_VAR_ADGUARD_LUNA_URL}}"
+        widget:
+            type: adguard
+            fields: ["queries", "blocked", "latency"]
+            url: "{{HOMEPAGE_VAR_ADGUARD_LUNA_URL}}"
+            username: "{{HOMEPAGE_VAR_ADGUARD_USERNAME}}"
+            password: "{{HOMEPAGE_VAR_ADGUARD_PASSWORD}}"
+    - Guard2:
+        href: "{{HOMEPAGE_VAR_ADGUARD_NODE2_URL_PUBLIC}}"
+        icon: adguard-home.png
+        siteMonitor: "{{HOMEPAGE_VAR_ADGUARD_NODE2_URL}}"
+        widget:
+            type: adguard
+            fields: ["queries", "blocked", "latency"]
+            url: "{{HOMEPAGE_VAR_ADGUARD_NODE2_URL}}"
+            username: "{{HOMEPAGE_VAR_ADGUARD_USERNAME}}"
+            password: "{{HOMEPAGE_VAR_ADGUARD_PASSWORD}}"
+
+    - Guard3:
+        href: "{{HOMEPAGE_VAR_ADGUARD_NODE3_URL_PUBLIC}}"
+        icon: adguard-home.png
+        siteMonitor: "{{HOMEPAGE_VAR_ADGUARD_NODE3_URL}}"
+        widget:
+            type: adguard
+            fields: ["queries", "blocked", "latency"]
+            url: "{{HOMEPAGE_VAR_ADGUARD_NODE3_URL}}"
+            username: "{{HOMEPAGE_VAR_ADGUARD_USERNAME}}"
+            password: "{{HOMEPAGE_VAR_ADGUARD_PASSWORD}}"
+
+- Links:
+    - nobodyhome.dev:
+        href: "{{HOMEPAGE_VAR_URL_PUBLIC}}"
+        icon: mdi-lightbulb-variant-outline-#FFFFFF
+        siteMonitor: "{{HOMEPAGE_VAR_URL}}"
+    - Unraid:
+        icon: unraid.png
+        href: "{{HOMEPAGE_VAR_TERRA_URL_PUBLIC}}"
+        description: Terra
+        ping: "{{HOMEPAGE_VAR_TERRA_IP}}"
+    - VS Code:
+        icon: vscode.png
+        href: "{{HOMEPAGE_VAR_VSCODE_URL_PUBLIC}}"
+        siteMonitor: "{{HOMEPAGE_VAR_VSCODE_URL}}"
+    - Stable Diffusion:
+        icon: /images/stable-diffusion.png
+        href: "{{HOMEPAGE_VAR_STABLEDIFFUSION_URL_PUBLIC}}"
+        siteMonitor: "{{HOMEPAGE_VAR_STABLEDIFFUSION_URL}}"
+    - AI Image Gallery:
+        icon: mdi-view-gallery-outline-#FFFFFF
+        href: "{{HOMEPAGE_VAR_STABLEDIFFUSION_GAL_URL_PUBLIC}}"
+        siteMonitor: "{{HOMEPAGE_VAR_STABLEDIFFUSION_GAL_URL}}"
+    - Github:
+        icon: github-light.png
+        href: https://github.com/welcome-2themachine
+        description: welcome-2themachine
+        siteMonitor: https://github.com
+    - YouTube:
+        icon: youtube.png
+        href: https://youtube.com/
+        description: " "
+        siteMonitor: https://youtube.com
+    - Youtube Music:
+        icon: youtube-music.png
+        href: https://music.youtube.com
+        description: " "
+        siteMonitor: https://music.youtube.com
+    - Reddit:
+        icon: reddit.png
+        href: https://reddit.com/
+        description: " "
+        siteMonitor: https://reddit.com/
+
+

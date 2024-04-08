@@ -1,0 +1,47 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/settings
+
+title: YOUR TITLE
+favicon: /images/favicon.ico
+background:
+  image: /images/rainbow_pin.jpg
+  blur: md
+  saturate: 50
+  brightness: 50
+  opacity: 50
+
+theme: dark
+color: slate
+
+layout:
+  - Cloudflare:
+      style: row 
+      columns: 5
+      icon: cloudflare.png
+  - DNS:
+      style: row
+      columns: 4
+  - Virtualization:
+      useEqualHeights: true
+      style: row
+      columns: 3
+  - Media:
+      useEqualHeights: true
+      style: row
+      columns: 4
+  - Links: 
+      useEqualHeights: true
+      style: row
+      columns: 3
+
+
+quicklaunch:
+  searchDescriptions: true
+  showSearchSuggestions: true
+
+providers:
+  openweathermap: openweathermapapikey
+  weatherapi: weatherapiapikey
+
+statusStyle: "dot"
