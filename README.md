@@ -13,7 +13,7 @@ Use these files a a basis for your own homepage (if you like what I've done) or 
 
 ## Getting Started
 
-Populate your variables in the supplied .env-example
+Populate your variables in the supplied .env-example in the Templates folder
 
 Use the supplied docker-compose file to setup the stack on portainer OR just run using docker-compose.
 
