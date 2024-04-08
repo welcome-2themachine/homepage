@@ -4,8 +4,7 @@
 
 Homepage is my configuration files for a selfhosted hompage on a docker swarm (2x Raspberry Pi 4b 4GB) managed by Portainer.
 
-![Dashboard](.github/screenshots/dashboard.png)
-**Dashbaord**
+
 
 ### Use Case
 
