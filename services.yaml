@@ -195,10 +195,20 @@
             username: "{{HOMEPAGE_VAR_ADGUARD_USERNAME}}"
             password: "{{HOMEPAGE_VAR_ADGUARD_PASSWORD}}"
     
-    - Virtual Guard:  
-        href: "{{HOMEPAGE_VAR_ADGUARD_GUARD_URL}}"
+    - Virtual Guard 1:  
+        href: "{{HOMEPAGE_VAR_ADGUARD_GUARD1_URL}}"
         icon: adguard-home.png
-        siteMonitor: "{{HOMEPAGE_VAR_ADGUARD_GUARD_URL}}"
+        siteMonitor: "{{HOMEPAGE_VAR_ADGUARD_GUARD1_URL}}"
+        widget:
+            type: adguard
+            fields: ["queries", "blocked", "latency"]
+            url: "{{HOMEPAGE_VAR_ADGUARD_GUARD1_URL}}"
+            username: "{{HOMEPAGE_VAR_ADGUARD_USERNAME}}"
+            password: "{{HOMEPAGE_VAR_ADGUARD_PASSWORD}}"
+    - Virtual Guard 2:  
+        href: "{{HOMEPAGE_VAR_ADGUARD_GUARD2_URL}}"
+        icon: adguard-home.png
+        siteMonitor: "{{HOMEPAGE_VAR_ADGUARD_GUARD2_URL}}"
         widget:
             type: adguard
             fields: ["queries", "blocked", "latency"]
