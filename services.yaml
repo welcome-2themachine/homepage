@@ -152,7 +152,7 @@
     #             url: "{{HOMEPAGE_VAR_SPEEDTEST_URL}}"
     # Speed test is broken for some reason on this system
 
-- DNS:
+- DNS Servers:
     - Mariner:
         href: "{{HOMEPAGE_VAR_ADGUARD_URL_MARINER_PUBLIC}}"
         icon: adguard-home.png
@@ -195,6 +195,7 @@
             username: "{{HOMEPAGE_VAR_ADGUARD_USERNAME}}"
             password: "{{HOMEPAGE_VAR_ADGUARD_PASSWORD}}"
     
+- DNS:
     - Virtual Guard 1:  
         href: "{{HOMEPAGE_VAR_ADGUARD_GUARD1_URL}}"
         icon: adguard-home.png

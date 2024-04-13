@@ -21,6 +21,11 @@ layout:
       icon: cloudflare.png
   - DNS:
       style: row
+      columns: 2
+      icon: adguard-home.png
+  - DNS Servers:
+      header: false
+      style: row
       columns: 4
   - Virtualization:
       useEqualHeights: true
