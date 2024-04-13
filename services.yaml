@@ -194,6 +194,17 @@
             url: "{{HOMEPAGE_VAR_ADGUARD_NODE3_URL}}"
             username: "{{HOMEPAGE_VAR_ADGUARD_USERNAME}}"
             password: "{{HOMEPAGE_VAR_ADGUARD_PASSWORD}}"
+    
+    - Virtual Guard:  
+        href: "{{HOMEPAGE_VAR_ADGUARD_GUARD_URL}}"
+        icon: adguard-home.png
+        siteMonitor: "{{HOMEPAGE_VAR_ADGUARD_GUARD_URL}}"
+        widget:
+            type: adguard
+            fields: ["queries", "blocked", "latency"]
+            url: "{{HOMEPAGE_VAR_ADGUARD_GUARD_URL}}"
+            username: "{{HOMEPAGE_VAR_ADGUARD_USERNAME}}"
+            password: "{{HOMEPAGE_VAR_ADGUARD_PASSWORD}}"
 
 - Links:
     - "{{HOMEPAGE_VAR_MYURL_PUBLIC}}":
