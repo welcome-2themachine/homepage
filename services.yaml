@@ -205,6 +205,7 @@
             url: "{{HOMEPAGE_VAR_ADGUARD_GUARD1_URL}}"
             username: "{{HOMEPAGE_VAR_ADGUARD_USERNAME}}"
             password: "{{HOMEPAGE_VAR_ADGUARD_PASSWORD}}"
+            
     - Virtual Guard 2:  
         href: "{{HOMEPAGE_VAR_ADGUARD_GUARD2_URL}}"
         icon: adguard-home.png
