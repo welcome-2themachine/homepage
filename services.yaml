@@ -89,7 +89,7 @@
         href: "{{HOMEPAGE_VAR_SONARR_URL_PUBLIC}}"
         icon: sonarr.png
         description: "TV Library"
-        siteMonritor: "{{HOMEPAGE_VAR_SONARR_URL}}"
+        siteMonitor: "{{HOMEPAGE_VAR_SONARR_URL}}"
         widget:
             type: sonarr
             url: "{{HOMEPAGE_VAR_SONARR_URL}}"
